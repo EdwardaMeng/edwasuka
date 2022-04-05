@@ -1,32 +1,42 @@
 <template id="app">
-  <FrontPage/>
-  <Navigation/>
+  <Navigation></Navigation>
+  <router-view></router-view>
 </template>
 
 <script>
-import FrontPage from "@/components/FrontPage";
-import Navigation from "@/components/Navigation";
-// import 'bootstrap/dist/css/bootstrap.min.css'
-// import 'jquery/src/jquery.js'
-// import 'bootstrap/dist/js/bootstrap.min.js'
+
+// import Navigation from "@/components/Navigation";
+import A from "./components/Home"
+import B from "./components/B"
+import C from "./components/C"
+// import Index from "./components/Index"
+import Navigation from "./components/Navigation"
+
+
 export default {
+
   name: 'App',
   components: {
+    // Index,
     Navigation,
-    FrontPage,
-
+    // eslint-disable-next-line vue/no-unused-components
+    A,
+    // eslint-disable-next-line vue/no-unused-components
+    B,
+    // eslint-disable-next-line vue/no-unused-components
+    C
   }
 }
 </script>
 
 <style>
 #app {
+
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 @import'~bootstrap/dist/css/bootstrap.css';
