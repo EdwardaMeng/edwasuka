@@ -3,15 +3,20 @@ import { createRouter, createWebHashHistory } from "vue-router"
 const Home = () => import("../components/Home")
 const B = () => import("../components/B")
 const C = () => import("../components/C")
+
+const HomeImage = () => import("../components/HomeImage.vue")
 // const Nav = () => import("../components/Navigation")
 
 const routes = [
-    // { path: "/", redirect: "/Website" },
-    // {
-    //     path: "/Website",
-    //     name: "Website",
-    //     component: Nav
-    // },
+    { path: "/", redirect: "/HomeImage" },
+    {
+        path: "/HomeImage",
+        name: "HomeImage",
+        component: HomeImage,
+        meta: {
+            hideNavbar: true
+        }
+    },
     { path: "/", redirect: "/Home" },
     {
         path: "/Home",
@@ -30,6 +35,7 @@ const routes = [
         name: "PageC",
         component: C
     },
+
 
 ]
 

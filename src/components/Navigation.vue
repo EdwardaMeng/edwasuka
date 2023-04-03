@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+  <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
       <div id="logodiv">
         <img id="logo" :src="logo">
@@ -15,6 +15,9 @@
           <li class="nav-item">
             <a class="nav-link" @click="toPageC">Page C</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" @click="toHomeImage">Home Image</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -26,8 +29,9 @@ import { useRouter } from 'vue-router'
 export default {
   data(){
     return{
-      logo: require('../assets/Logo.png')
+      showNav:true
     }
+
   },
   setup () {
     const router = useRouter()
@@ -46,10 +50,16 @@ export default {
         name: 'PageC'
       })
     })
+    const toHomeImage = (() =>{
+      router.push({
+        name: 'HomeImage'
+      })
+    })
     return {
       toHOME,
       toPageB,
-      toPageC
+      toPageC,
+      toHomeImage
     }
     },
 
@@ -68,15 +78,9 @@ export default {
   margin-left: 20px;
   padding-left: 20px;
 }
-#logodiv{
-  size: 30px;
-  background-color: aliceblue;
-  border-radius: 100px;
-  border: solid white;
-}
 
 a{
-  color: blue;
+  color: white;
 }
 
 </style>

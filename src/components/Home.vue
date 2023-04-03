@@ -1,4 +1,5 @@
 <template>
+  <Navigation></Navigation>
   <div>
     <img id="img1" :src="img1">
   </div>

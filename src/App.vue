@@ -1,5 +1,5 @@
 <template id="app">
-  <Navigation></Navigation>
+  <Navigation v-if="!hideNavbar"></Navigation>
   <router-view></router-view>
 </template>
 
@@ -9,6 +9,7 @@
 import A from "./components/Home"
 import B from "./components/B"
 import C from "./components/C"
+import HomeImage from "@/components/HomeImage.vue";
 // import Index from "./components/Index"
 import Navigation from "./components/Navigation"
 
@@ -17,19 +18,33 @@ export default {
 
   name: 'App',
   components: {
-    // Index,
+    // eslint-disable-next-line vue/no-unused-components
     Navigation,
+    // Index,
     // eslint-disable-next-line vue/no-unused-components
     A,
     // eslint-disable-next-line vue/no-unused-components
     B,
     // eslint-disable-next-line vue/no-unused-components
-    C
-  }
+    C,
+    // eslint-disable-next-line vue/no-unused-components
+    HomeImage
+  },
+  computed: {
+    hideNavbar () {
+      return this.$store.state.hideNavbar
+    }
+  },
+
+
 }
+
+
 </script>
 
 <style>
+@import '~bootstrap/dist/css/bootstrap.css';
+
 #app {
 
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -38,7 +53,5 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
-@import'~bootstrap/dist/css/bootstrap.css';
 
 </style>
