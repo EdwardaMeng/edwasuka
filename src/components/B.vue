@@ -1,5 +1,7 @@
 <template>
-  <h1>Page B</h1>
+  <agile>
+
+  </agile>
 </template>
 
 <script>

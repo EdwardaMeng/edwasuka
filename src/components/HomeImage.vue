@@ -10,7 +10,7 @@
     </transition-group>
   </div>
 
-  <div class="fullscreen-image blur-image" :style="{ filter: 'blur(' + blurAmount + 'px)' }">
+  <div class="fullscreen-image blur-image">
     <img :src=img1 alt="">
   </div>
 </template>

@@ -1,8 +1,8 @@
-import "bootstrap/dist/css/bootstrap.min.css"
 import { createApp } from "vue";
 import App from "./App.vue";
 import {router} from "./route";
 import store from './store';
+import './style.css'
 
 router.beforeEach((to, from, next) => {
     const hideNavbar = to.meta.hideNavBar || false
@@ -16,5 +16,4 @@ createApp(App)
     .mount("#app");
 
 
-import "bootstrap/dist/js/bootstrap.js"
 

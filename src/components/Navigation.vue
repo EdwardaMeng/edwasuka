@@ -15,9 +15,6 @@
           <li class="nav-item">
             <a class="nav-link" @click="toPageC">Page C</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" @click="toHomeImage">Home Image</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -50,16 +47,10 @@ export default {
         name: 'PageC'
       })
     })
-    const toHomeImage = (() =>{
-      router.push({
-        name: 'HomeImage'
-      })
-    })
     return {
       toHOME,
       toPageB,
       toPageC,
-      toHomeImage
     }
     },
 

@@ -1,7 +1,7 @@
 <template>
   <Navigation></Navigation>
-  <div>
-    <img id="img1" :src="img1">
+  <div v-bind:style="{backgroundColor: bgColor}">
+
   </div>
 </template>
 
@@ -11,15 +11,13 @@ export default {
   name: "HOME",
   data(){
     return{
-      img1: require('../assets/img1.jpg')
+      // eslint-disable-next-line no-undef
+      bgColor: 'black',
     }
   }
 }
 </script>
 
 <style scoped>
-#img1{
-  width: 100%;
-  height: auto;
-}
+
 </style>

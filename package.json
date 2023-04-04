@@ -9,10 +9,15 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.4",
+    "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
     "firebase": "^9.6.10",
-    "vue": "^3.2.31",
+    "save": "^2.9.0",
+    "swiper": "^9.2.0",
+    "vue": "^3.2.47",
+    "vue-agile": "^2.0.0",
     "vue-router": "^4.0.14",
+    "vue3-bootstrap": "^1.0.0",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
@@ -21,7 +26,7 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "bootstrap": "^4.6.1",
+    "bootstrap": "^4.6.2",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "jquery": "^3.6.0",

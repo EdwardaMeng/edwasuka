@@ -9,8 +9,6 @@
 import A from "./components/Home"
 import B from "./components/B"
 import C from "./components/C"
-import HomeImage from "@/components/HomeImage.vue";
-// import Index from "./components/Index"
 import Navigation from "./components/Navigation"
 
 
@@ -28,7 +26,6 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     C,
     // eslint-disable-next-line vue/no-unused-components
-    HomeImage
   },
   computed: {
     hideNavbar () {
