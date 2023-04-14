@@ -1,32 +1,28 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-dark">
-    <div class="container-fluid">
-      <div id="logodiv">
-        <img id="logo" :src="logo">
-      </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" @click="toHOME">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" @click="toPageB">Page B</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" @click="toPageC">Page C</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <v-toolbar class="justify-start" height="100px" color="black">
+      <!--        <v-navigation-drawer></v-navigation-drawer>-->
+      <v-toolbar-title class="text-left" style="color: #eeeeee" title="EdwAsuka Photography">EdwAsuka Photography</v-toolbar-title>
+      <v-toolbar-items class="justify-start">
+        <v-spacer></v-spacer>
+        <v-btn class="justify-start" text @click="toHOME">HOME</v-btn>
+        <v-btn class="justify-start" text @click="toPageB">PAGE-B</v-btn>
+        <v-btn class="justify-start" text @click="toRose4">ROSE4</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
 </template>
 
 <script>
 import { useRouter } from 'vue-router'
+
+
+
 export default {
+  components: {
+
+  },
   data(){
     return{
-      showNav:true
+      showNav:true,
     }
 
   },
@@ -42,15 +38,15 @@ export default {
         name: 'PageB'
       })
     })
-    const toPageC = (() => {
+    const toRose4 = (() => {
       router.push({
-        name: 'PageC'
+        name: 'Rose4'
       })
     })
     return {
       toHOME,
       toPageB,
-      toPageC,
+      toRose4,
     }
     },
 
@@ -60,18 +56,7 @@ export default {
 </script>
 
 <style scoped>
-#logo{
-  height: auto;
-  width:40px;
-  margin: 4px;
-}
-.nav-item{
-  margin-left: 20px;
-  padding-left: 20px;
-}
-
-a{
-  color: white;
-}
-
+  a{
+    color: #eeeeee;
+  }
 </style>

@@ -1,14 +1,17 @@
 <template id="app">
-  <Navigation v-if="!hideNavbar"></Navigation>
-  <router-view></router-view>
+  <v-app>
+    <Navigation v-if="!hideNavbar"></Navigation>
+    <router-view></router-view>
+  </v-app>
+
 </template>
 
 <script>
 
 // import Navigation from "@/components/Navigation";
-import A from "./components/Home"
-import B from "./components/B"
-import C from "./components/C"
+import Home from "./components/Home"
+import CTO from "./components/CapturingTheOrdinary.vue"
+import Rose4 from "./components/Rose4.vue"
 import Navigation from "./components/Navigation"
 
 
@@ -20,11 +23,11 @@ export default {
     Navigation,
     // Index,
     // eslint-disable-next-line vue/no-unused-components
-    A,
+    Home,
     // eslint-disable-next-line vue/no-unused-components
-    B,
+    CTO,
     // eslint-disable-next-line vue/no-unused-components
-    C,
+    Rose4,
     // eslint-disable-next-line vue/no-unused-components
   },
   computed: {
@@ -40,8 +43,6 @@ export default {
 </script>
 
 <style>
-@import '~bootstrap/dist/css/bootstrap.css';
-
 #app {
 
   font-family: Avenir, Helvetica, Arial, sans-serif;

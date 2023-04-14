@@ -1,22 +1,13 @@
 import { createRouter, createWebHashHistory } from "vue-router"
 
-const Home = () => import("../components/Home")
-const B = () => import("../components/B")
-const C = () => import("../components/C")
 
-const HomeImage = () => import("../components/HomeImage.vue")
+const Home = () => import("../components/Home")
+const B = () => import("../components/CapturingTheOrdinary.vue")
+const Rose4 = () => import("../components/Rose4.vue")
+
 // const Nav = () => import("../components/Navigation")
 
 const routes = [
-    { path: "/", redirect: "/HomeImage" },
-    {
-        path: "/HomeImage",
-        name: "HomeImage",
-        component: HomeImage,
-        meta: {
-            hideNavbar: true
-        }
-    },
     { path: "/", redirect: "/Home" },
     {
         path: "/Home",
@@ -29,17 +20,21 @@ const routes = [
         name: "PageB",
         component: B
     },
-    { path: "/", redirect: "/PageC" },
+    { path: "/", redirect: "/Rose4" },
     {
-        path: "/PageC",
-        name: "PageC",
-        component: C
+        path: "/Rose4",
+        name: "Rose4",
+        component: Rose4
     },
 
 
 ]
 
+
+
 export const router = createRouter({
     history: createWebHashHistory(),
     routes: routes
 })
+
+
