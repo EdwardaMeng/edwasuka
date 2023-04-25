@@ -1,18 +1,19 @@
 <template id="app">
-  <v-app>
-    <Navigation v-if="!hideNavbar"></Navigation>
-    <router-view></router-view>
-  </v-app>
-
+  <Navigation v-if="!hideNavbar"></Navigation>
+  <router-view></router-view>
 </template>
 
 <script>
 
 // import Navigation from "@/components/Navigation";
 import Home from "./components/Home"
-import CTO from "./components/CapturingTheOrdinary.vue"
 import Rose4 from "./components/Rose4.vue"
 import Navigation from "./components/Navigation"
+import FelineFotos from "@/components/FelineFotos.vue";
+import SneakerVision from "@/components/SneakerVision.vue";
+import EveryDay from "@/components/EveryDay.vue";
+import Waterfall from 'vue-waterfall/lib/waterfall'
+import WaterfallSlot from 'vue-waterfall/lib/waterfall-slot'
 
 
 export default {
@@ -25,10 +26,17 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     Home,
     // eslint-disable-next-line vue/no-unused-components
-    CTO,
+    EveryDay,
     // eslint-disable-next-line vue/no-unused-components
     Rose4,
     // eslint-disable-next-line vue/no-unused-components
+    SneakerVision,
+    // eslint-disable-next-line vue/no-unused-components
+    FelineFotos,
+    // eslint-disable-next-line vue/no-unused-components
+    Waterfall,
+    // eslint-disable-next-line vue/no-unused-components
+    WaterfallSlot
   },
   computed: {
     hideNavbar () {
@@ -50,6 +58,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: black;
+}
+body{
+  background-color: black;
 }
 
 </style>

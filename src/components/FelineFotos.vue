@@ -1,11 +1,13 @@
 <template>
-  <p>
+  <v-container>
 
-  </p>
+  </v-container>
+
 </template>
 
 <script>
 export default {
+  name: "FelineFotos"
 }
 </script>
 
