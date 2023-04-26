@@ -12,8 +12,7 @@ import Navigation from "./components/Navigation"
 import FelineFotos from "@/components/FelineFotos.vue";
 import SneakerVision from "@/components/SneakerVision.vue";
 import EveryDay from "@/components/EveryDay.vue";
-import Waterfall from 'vue-waterfall/lib/waterfall'
-import WaterfallSlot from 'vue-waterfall/lib/waterfall-slot'
+
 
 
 export default {
@@ -33,10 +32,7 @@ export default {
     SneakerVision,
     // eslint-disable-next-line vue/no-unused-components
     FelineFotos,
-    // eslint-disable-next-line vue/no-unused-components
-    Waterfall,
-    // eslint-disable-next-line vue/no-unused-components
-    WaterfallSlot
+      // eslint-disable-next-line vue/no-unused-components
   },
   computed: {
     hideNavbar () {

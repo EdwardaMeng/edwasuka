@@ -1,17 +1,20 @@
 <template>
-    <v-toolbar class="justify-start" height="100px" color="black">
-      <!--        <v-navigation-drawer></v-navigation-drawer>-->
-      <v-toolbar-title class="text-left" style="color: #eeeeee" title="EdwAsuka Photography">EdwAsuka Photography</v-toolbar-title>
-      <v-toolbar-items class="justify-start">
-        <v-spacer></v-spacer>
-        <v-btn class="justify-start" text @click="toHOME">HOME</v-btn>
-        <v-btn class="justify-start" text @click="toFelineFotos">FelineFotos</v-btn>
-        <v-btn class="justify-start" text @click="toRose4">ROSE4</v-btn>
-        <v-btn class="justify-start" text @click="toEveryDay">EveryDay</v-btn>
-        <v-btn class="justify-start" text @click="toSneakerVision">SneakerVision</v-btn>
+    <v-container>
+        <v-toolbar class="justify-start" height="100px" color="black">
+            <!--        <v-navigation-drawer></v-navigation-drawer>-->
+            <v-toolbar-title class="text-left" style="color: #eeeeee" title="EdwAsuka Photography">EdwAsuka Photography</v-toolbar-title>
+            <v-toolbar-items class="justify-start">
+                <v-spacer></v-spacer>
+                <v-btn class="justify-start" text @click="toHOME">HOME</v-btn>
+                <v-btn class="justify-start" text @click="toFelineFotos">FelineFotos</v-btn>
+                <v-btn class="justify-start" text @click="toRose4">ROSE4</v-btn>
+                <v-btn class="justify-start" text @click="toEveryDay">EveryDay</v-btn>
+                <v-btn class="justify-start" text @click="toSneakerVision">SneakerVision</v-btn>
 
-      </v-toolbar-items>
-    </v-toolbar>
+            </v-toolbar-items>
+        </v-toolbar>
+    </v-container>
+
 </template>
 
 <script>
@@ -74,5 +77,8 @@ template{
   border-style: dashed;
   border-radius: 3px;
   border-color: #039be5;
+}
+v-container{
+    opacity: 0;
 }
 </style>

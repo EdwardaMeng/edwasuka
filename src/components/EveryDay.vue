@@ -1,59 +1,75 @@
 <template>
-  <waterfall :line-gap="200" :watch="images">
-    <!-- each component is wrapped by a waterfall slot -->
-    <waterfall-slot
-        v-for="(item, index) in images"
-        :width="item.width"
-        :height="item.height"
-        :order="index"
-        :key="item.id"
-    >
-      <img :src="item.url" alt="">
-    </waterfall-slot>
-  </waterfall>
+    <v-container class="container">
+        <div style=" width: 33%; margin-right: 10px">
+            <v-row>
+                <v-col cols="12" v-for="(image, index) in images1" :key="index">
+                    <img :src="image.url" >
+                </v-col>
+            </v-row>
+        </div>
+        <div style=" width: 33%; margin-right: 10px">
+                <v-row>
+                    <v-col cols="12" v-for="(image, index) in images2" :key="index">
+                        <img :src="image.url" >
+                    </v-col>
+                </v-row>
+        </div>
+        <div style="width: 33%;">
+                <v-row>
+                    <v-col cols="12" v-for="(image, index) in images3" :key="index">
+                        <img :src="image.url" >
+                    </v-col>
+                </v-row>
+        </div>
+    </v-container>
+
 
 
 </template>
 
 <script>
-
 export default {
   components:{
-
   },
   data(){
     return{
-      images:[
+
+        images1:[
         {
           url:"https://i.imgur.com/yIipDVG.jpg",
-          // width:1920,
-          // height:1080,
         },
         {
-          url:"https://i.imgur.com/ubUFFHh.jpg", type:2
-        },
-        {url:"https://i.imgur.com/r4n709X.jpg", type:1
+            url:"https://i.imgur.com/r4n709X.jpg",
         },
         {
-          url:"https://i.imgur.com/wK0WiUW.jpg", type:1
-        },
-        {
-          url:"https://i.imgur.com/CqoELT6.jpg", type:1
-        },
-        {
-          url:"https://i.imgur.com/fClyOYT.jpg", type:1
-        },
-        {
-          url:"https://i.imgur.com/HI1Lnis.jpg", type:1
-        },
-        {
-          url:"https://i.imgur.com/0WprWts.jpg", type:1
-        },
-        {
-          url:"https://i.imgur.com/AuReLVT.jpg", type:2
+            url:"https://i.imgur.com/AuReLVT.jpg",
         }
+        ],
+        images2:
+        [
+        {
+            url:"https://i.imgur.com/fClyOYT.jpg",
+        },
+        {
+            url:"https://i.imgur.com/HI1Lnis.jpg",
+        },
+        {
+            url:"https://i.imgur.com/0WprWts.jpg",
+        },
 
-      ]
+        ],
+        images3:
+        [
+        {
+            url:"https://i.imgur.com/wK0WiUW.jpg",
+        },
+        {
+            url:"https://i.imgur.com/CqoELT6.jpg",
+        },
+            {
+                url:"https://i.imgur.com/ubUFFHh.jpg",
+            },
+        ]
     }
   },
   computed: {
@@ -61,9 +77,14 @@ export default {
   },
   methods:{
 
-  }
+  },
+
 }
 </script>
 
+
 <style scoped>
+.container{
+    display:flex;
+}
 </style>
